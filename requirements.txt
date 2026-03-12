@@ -1,0 +1,7 @@
+pywhispercpp==1.4.1
+sounddevice==0.4.6
+pyautogui==0.9.54
+argparse
+pynput==1.8.1
+webrtcvad==2.0.10
+setuptools<58
