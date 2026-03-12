@@ -3,10 +3,21 @@
 A Python-based offline speech recognition system using Whisper.cpp for multi-language speech processing. Enables real-time transcription without internet connectivity.
 
 ## Model Setup
-1. Download Whisper ggml model:
-   - Base model (147 MB): [ggml-base.bin](https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-base.bin)
-   - Small model (466 MB): [ggml-small.bin](https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-small.bin)
+
+Models are **not included** in this repository due to size. Download Whisper GGML models from:
+- **Official Repository**: https://huggingface.co/ggerganov/whisper.cpp/tree/main
+
+### Recommended Models
+1. Download a Whisper ggml model:
+   - **Tiny** (39 MB): [ggml-tiny.bin](https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-tiny.bin) - Fastest, lower accuracy
+   - **Base** (147 MB): [ggml-base.bin](https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-base.bin) - Good balance
+   - **Small** (466 MB): [ggml-small.bin](https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-small.bin) - Better accuracy
+   - **Medium** (1.5 GB): [ggml-medium.bin](https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-medium.bin) - Best accuracy
+   - **Large** (3 GB): [ggml-large.bin](https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-large.bin) - Best quality, slowest
+
 2. Place the model file in the `model/` directory
+
+> **Note**: The `run_dictation.sh` script defaults to `model/ggml-tiny.bin`. Edit the script or use command-line arguments to use a different model.
 
 ## Installation
 ```bash
